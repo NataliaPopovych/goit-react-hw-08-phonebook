@@ -20,7 +20,7 @@ export const NavigationLink = styled(NavLink)`
     color 250ms ease-in;
   &:hover {
     background-color: white;
-    color: darkgreen;
+    color: darkblue;
   }
   &:active {
     background-image: radial-gradient(
