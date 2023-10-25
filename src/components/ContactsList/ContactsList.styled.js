@@ -7,7 +7,7 @@ export const ContactContainer = styled.div`
 
 export const Title = styled.h2`
   font-size: 28px;
-  color: darkgreen;
+  color: darkblue;
   & > sup {
     font-size: 16px;
     color: blue;
