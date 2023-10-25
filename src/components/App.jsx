@@ -1,16 +1,53 @@
+import { useAuth } from 'hooks/useAuth';
+import { useEffect, lazy } from 'react';
+import { useDispatch } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import { refreshUser } from 'redux/auth/auth.operations';
+import { LayoutApp } from './LayoutApp/LayoutApp';
+import { RestrictedRoute } from './Routes/RestrictedRoute';
+import { PrivateRoute } from './Routes/PrivateRoute';
+import { Refresh } from 'styles/Layout';
+
+export const HomePage = lazy(() => import('pages/HomePage/HomePage'));
+const LoginPage = lazy(() => import('pages/Login/Login'));
+const RegisterPage = lazy(() => import('pages/Register/Register'));
+const ContactsPage = lazy(() => import('pages/Contacts/Contacts'));
+const NotFoundPage = lazy(() => import('pages/NotFoundPage/NotFoundPage'));
+
 export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+  const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
+  return isRefreshing ? (
+    <Refresh>Refreshing user...</Refresh>
+  ) : (
+    <Routes>
+      <Route path="/" element={<LayoutApp />}>
+        <Route index element={<HomePage />} />
+        <Route
+          path="/register"
+          element={
+            <RestrictedRoute component={RegisterPage} redirectTo="/contacts" />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <RestrictedRoute component={LoginPage} redirectTo="/contacts" />
+          }
+        />
+        <Route
+          path="/contacts"
+          element={
+            <PrivateRoute component={ContactsPage} redirectTo="/login" />
+          }
+        />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 };

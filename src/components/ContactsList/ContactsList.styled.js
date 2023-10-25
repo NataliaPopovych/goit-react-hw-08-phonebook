@@ -1,0 +1,32 @@
+import styled from 'styled-components';
+
+export const ContactContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Title = styled.h2`
+  font-size: 28px;
+  color: darkgreen;
+  & > sup {
+    font-size: 16px;
+    color: blue;
+    margin-left: 8px;
+    font-weight: 700;
+  }
+`;
+export const HeadContacts = styled.div`
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 14px;
+`;
+export const ContactList = styled.ul``;
+
+export const MessageAboutEmpty = styled.div`
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  color: red;
+`;
