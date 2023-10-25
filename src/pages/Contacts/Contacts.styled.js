@@ -4,7 +4,7 @@ export const TitleH1 = styled.h1`
   margin-top: 24px;
   text-align: center;
   font-size: 28px;
-  color: darkgreen;
+  color: darkblue;
 `;
 
 export const ContactsInfo = styled.div`

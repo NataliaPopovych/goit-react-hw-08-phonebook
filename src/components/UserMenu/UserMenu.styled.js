@@ -23,5 +23,5 @@ export const UserButton = styled.button`
 `;
 
 export const Greeting = styled.p`
-  color: white;
+  color: darkblue;
 `;

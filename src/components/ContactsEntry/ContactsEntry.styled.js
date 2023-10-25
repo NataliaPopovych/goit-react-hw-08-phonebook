@@ -20,9 +20,9 @@ export const Button = styled.button`
   margin: 16px auto;
   padding: 4px;
   width: 10em;
-  border: 1px solid darkgreen;
+  border: 1px solid darkblue;
   border-radius: 4px;
-  background-color: green;
+  background-color: blue;
   cursor: pointer;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
@@ -31,8 +31,8 @@ export const Button = styled.button`
     scale 150ms ease-in;
   &:is(:hover, :focus) {
     outline: none;
-    color: green;
-    background-color: darkgreen;
+    color: blue;
+    background-color: darkblue;
   }
   &:active {
     scale: 0.95;

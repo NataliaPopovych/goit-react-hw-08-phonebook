@@ -5,9 +5,4 @@ export const AppBarNav = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @media screen and (max-width: 468px) {
-    flex-direction: column;
-    margin: 0 auto;
-  }
 `;
