@@ -16,7 +16,7 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   height: 72px;
-  background-color: darkgreen;
+  background-color: darkblue;
   border-radius: 8px;
   box-shadow: 3px 3px 19px 0px rgba(17, 17, 17, 0.75);
   -webkit-box-shadow: 3px 3px 19px 0px rgba(17, 17, 17, 0.75);
