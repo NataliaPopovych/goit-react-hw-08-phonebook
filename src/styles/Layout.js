@@ -5,8 +5,8 @@ export const Layout = styled.div`
   width: 800px;
   margin: 32px auto;
   padding: 15px;
-  background-color: green;
-  border: 1px solid darkgreen;
+  background-color: blue;
+  border: 1px solid darkblue;
   border-radius: 8px;
   box-shadow: 3px 3px 19px 0px rgba(17, 17, 17, 0.75);
   -webkit-box-shadow: 3px 3px 19px 0px rgba(17, 17, 17, 0.75);
